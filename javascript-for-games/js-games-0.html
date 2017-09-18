@@ -69,7 +69,7 @@ Wil je dat de code één keer wordt uitgevoerd of stopt met herhalen dan gebruik
 
 Je ziet ook de setupfunctie. Deze functie wordt één keer uitgevoerd aan het begin van je programma.
 
-## Laten we beginnen!
+### Laten we beginnen!
 Je vingers jeuken natuurlijk al en je wilt meteen aan de slag. Wat we nodig hebben is het volgende:
 
 * Editor (bijvoorbeeld Atom)
@@ -92,18 +92,57 @@ Ga nu naar de volgende url adres in je browser:
 127.0.0.7:8000
 ~~~
 
-Als het goed is zie je een lijst met bestanden die in die map staat.
+Als het goed is zie je een lijst met bestanden die in die map staat. Sla hier straks je html en javascript bestand in op.
 <a name="les1"></a>
+## Les 1 - Je eerste tekening
+
 Je gaat nu je eerste tekening maken. Gebruik zo veel mogelijk variabelen om de verschillende lengtes aan te geven. Je zult merken dat je tekening dan veel sneller te veranderen is zonder dat je moet gaan zoeken waar welk getal ook alweer voor staat.
 
-Een aantal belangrijke
+Een aantal belangrijke figuren zijn ellipsen, rechthoeken en lijnen. Je kunt ze vullen met een bepaalde kleur of de rand uitzetten of van kleur veranderen. Kijk maar eens naar het voorbeeld hieronder.
+<p data-height="490" data-theme-id="light" data-slug-hash="boEgrp" data-default-tab="js,result" data-user="jurjenh" data-embed-version="2" data-pen-title="boEgrp" class="codepen">See the Pen <a href="https://codepen.io/jurjenh/pen/boEgrp/">boEgrp</a> by Jurjenh (<a href="https://codepen.io/jurjenh">@jurjenh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
+Zoals je ziet zijn al die getallen wel onoverzichtelijk. Wat als we nu iets willen veranderen? Laten we hetzelfde voorbeeld nu eens maken met behulp van variabelen.
 
+<p data-height="591" data-theme-id="light" data-slug-hash="BwjpML" data-default-tab="js,result" data-user="jurjenh" data-embed-version="2" data-pen-title="BwjpML" class="codepen">See the Pen <a href="https://codepen.io/jurjenh/pen/BwjpML/">BwjpML</a> by Jurjenh (<a href="https://codepen.io/jurjenh">@jurjenh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+Dat ziet er al beter uit. Natuurlijk kunnen we ook nog een variabele toevoegen voor bepaalde kleuren of de hoogte van de wielen en meer. We gaan dat nu niet doen.
+
+Ga nu zelf een tekening maken. Je hebt hiervoor een html pagina nodig met het volgende erin:
+
+~~~html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    <script src="tekening.js"></script> <!-- dit javascriptbestand bevat je tekening -->
+  </head>
+  <body>
+  </body>
+</html>
+~~~
+
+Zet dit bestand en je tekening in de map waar je de webserver hebt opgestart.
+
+Als je wilt weten wat je nog meer kunt gebruiken kijk dan op [https://p5js.org/reference/](https://p5js.org/reference/).
 <a name="les3"></a>
+## Les 2 - Animaties
+Als je variabalen hebt gebruikt zoals in het voorbeeld is het eenvoudig om er een animatie van te maken! We voegen nu namelijk één regel code toe. Deze regel code verhoogt xCar met 1, iedere keer dat de draw loop doorlopen wordt. Zo wordt er steeds een nieuwe auto getekend. Alleen jammer dat de oude auto ook blijft staan.
 
+<p data-height="599" data-theme-id="light" data-slug-hash="qPbrbe" data-default-tab="js,result" data-user="jurjenh" data-embed-version="2" data-pen-title="qPbrbe" class="codepen">See the Pen <a href="https://codepen.io/jurjenh/pen/qPbrbe/">qPbrbe</a> by Jurjenh (<a href="https://codepen.io/jurjenh">@jurjenh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+Wat gebeurt er nou? Elke keer wordt in de draw loop alles getekend over de tekening die er al stond. Als we dus een nieuwe auto willen zullen we de achtergrond steeds opnieuw moeten tekenen. Bovendien rijdt de auto uit het scherm. Dat gaan we later oplossen.
+
+Nu we steeds meer code gaat toevoegen is het handig om een functie te maken voor onze auto. We voeren wat wijzigingen door en krijgen dan het volgende voorbeeld. Een rijdende auto!
+
+<p data-height="676" data-theme-id="light" data-slug-hash="KXVWNR" data-default-tab="js,result" data-user="jurjenh" data-embed-version="2" data-pen-title="KXVWNR" class="codepen">See the Pen <a href="https://codepen.io/jurjenh/pen/KXVWNR/">KXVWNR</a> by Jurjenh (<a href="https://codepen.io/jurjenh">@jurjenh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+Ga nu een animatie maken met je eigen tekening.
 
 <a name="les4"></a>
-
+## Les 3 - Border detection
+Het is wel jammer dat de auto wegrijdt. Kunnen we hem niet laten omkeren? Jazeker!
 </xmp>
 
 <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
