@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Javascript voor games - P5.js</title>
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!--
+  <nav class="topnav" id="myTopnav">
+    <a href="#les0">Les 0 - Setup</a>
+    <a href="#les1">Les 1 - Je eerste tekening</a>
+    <a href="#les2">Les 2 - Animaties</a>
+    <a href="#les3">Les 3 - Border detection</a>
+    <a href="#les3">Les 4 - Meerdere objecten, wat nu?</a>
+
+  </nav>
+  -->
+</head>
+
+<body>
+<!-- scripts al laden buiten de xmp tag-->
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<xmp theme="journal" style="display:none;">
+<a name="les0"></a>
+## Les 0 - Introductie en setup
+
+P5.js is een bibliotheek (library) met functionaliteit waarmee je snel en eenvoudig tekeningen en animaties kunt maken voor het web. Misschien heb je wel gehoord van Processing.js maar dat is eigenlijk een voorloper van P5.js. De taal die je voor P5.js gebruikt is gewoon javascript. Bij Processing is de basistaal Java.
+
+Wat het zo fijn maakt is dat je met simpele commando's figuren kunt tekenen. Zo kun je een rechthoek tekenen als volgt:
+
+~~~javascript
+rect(20, 30, 40, 20); //Rechthoek op positie (20, 30), 40 pixels breed en 20 pixels hoog.
+~~~
+
+### Canvas
+Net als bij het schilderen teken je op een canvas, een deel van je browserwindow. Je kunt zelf bepalen hoe groot of hoe klein het canvas is maar alles wat je tekent moet op het canvas komen anders zie je het niet (maar het is er wel).
+
+Zoals je gewend bent zit het punt (0, 0) helemaal linksboven op je canvas. Alle afmetingen die gaat gebruiken zijn in pixels.
+
+
+### Draw loop en setup
+De basis van je tekening of animatie is altijd de draw loop. De code in deze loop blijft achter elkaar uitgevoerd worden. Een eerste voorbeeldprogramma is als volgt:
+
+<!--
+~~~javascript
+var breedte;
+var hoogte;
+var xpos;
+var ypos;
+
+function setup(){
+  breedte = 100;
+  hoogte = 50;
+  xpos = 0;
+  ypos = 0;
+}
+
+function draw(){
+  rect(xpos, ypos, breedte, hoogte);
+}
+~~~
+-->
+
+<p data-height="350" data-theme-id="light" data-slug-hash="gGPMLY" data-default-tab="js,result" data-user="jurjenh" data-embed-version="2" data-pen-title="gGPMLY" class="codepen">See the Pen <a href="https://codepen.io/jurjenh/pen/gGPMLY/">gGPMLY</a> by Jurjenh (<a href="https://codepen.io/jurjenh">@jurjenh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+Dit programma tekent een rechtoek en blijft dat 60 keer per seconde doen. De framerate is namelijk 60 fps (frames per second). Wat je dus zult zien is een rechthoek en meer niet.
+Wil je dat de code één keer wordt uitgevoerd of stopt met herhalen dan gebruik je:
+
+    noLoop();
+
+Je ziet ook de setupfunctie. Deze functie wordt één keer uitgevoerd aan het begin van je programma.
+
+## Laten we beginnen!
+Je vingers jeuken natuurlijk al en je wilt meteen aan de slag. Wat we nodig hebben is het volgende:
+
+* Editor (bijvoorbeeld Atom)
+* Een webserver
+* Ehm, verder niets
+
+Je kunt uiteindelijk je programma wel op een server zetten die met het internet verbonden is, maar we beginnen met een webserver die alleen op je eigen computer draait. Met Python kun je eenvoudig een webserver aanzetten. (Ik ga ervan uit dat je python hebt geinstalleerd).
+
+* Open een terminal of een Powershell
+* Maak een map aan waarin je aan je project gaat werken en ga die map in (met cd)
+* Typ het onderstaande commando in:
+
+~~~
+python3 -m http.server
+~~~
+
+Ga nu naar de volgende url adres in je browser:
+
+~~~
+127.0.0.7:8000
+~~~
+
+Als het goed is zie je een lijst met bestanden die in die map staat.
+<a name="les1"></a>
+Je gaat nu je eerste tekening maken. Gebruik zo veel mogelijk variabelen om de verschillende lengtes aan te geven. Je zult merken dat je tekening dan veel sneller te veranderen is zonder dat je moet gaan zoeken waar welk getal ook alweer voor staat.
+
+Een aantal belangrijke
+
+
+<a name="les3"></a>
+
+
+<a name="les4"></a>
+
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</body>
+</html>
