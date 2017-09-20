@@ -45,17 +45,17 @@ De basis van je tekening of animatie is altijd de draw loop. De code in deze loo
 var breedte;
 var hoogte;
 var xpos;
-var ypos;
+var yPos;
 
 function setup(){
   breedte = 100;
   hoogte = 50;
   xpos = 0;
-  ypos = 0;
+  yPos = 0;
 }
 
 function draw(){
-  rect(xpos, ypos, breedte, hoogte);
+  rect(xpos, yPos, breedte, hoogte);
 }
 ~~~
 -->
@@ -74,9 +74,9 @@ Je vingers jeuken natuurlijk al en je wilt meteen aan de slag. Wat we nodig hebb
 
 * Editor (bijvoorbeeld Atom)
 * Een webserver
-* Ehm, verder niets
+* Een browser
 
-Je kunt uiteindelijk je programma wel op een server zetten die met het internet verbonden is, maar we beginnen met een webserver die alleen op je eigen computer draait. Met Python kun je eenvoudig een webserver aanzetten. (Ik ga ervan uit dat je python hebt geinstalleerd).
+Je kunt uiteindelijk je programma wel op een server zetten die met het internet verbonden is, maar we beginnen met een webserver die alleen op je eigen computer draait. Met Python kun je eenvoudig een webserver aanzetten. (We gaan ervan uit dat je python hebt geinstalleerd).
 
 * Open een terminal of een Powershell
 * Maak een map aan waarin je aan je project gaat werken en ga die map in (met cd)
@@ -89,14 +89,14 @@ python3 -m http.server
 Ga nu naar de volgende url adres in je browser:
 
 ~~~
-127.0.0.7:8000
+127.0.0.1:8000
 ~~~
 
 Als het goed is zie je een lijst met bestanden die in die map staat. Sla hier straks je html en javascript bestand in op.
 <a name="les1"></a>
 ## Les 1 - Je eerste tekening
 
-Je gaat nu je eerste tekening maken. Gebruik zo veel mogelijk variabelen om de verschillende lengtes aan te geven. Je zult merken dat je tekening dan veel sneller te veranderen is zonder dat je moet gaan zoeken waar welk getal ook alweer voor staat.
+Je gaat aan het einde van deze les je eerste tekening maken. Gebruik zo veel mogelijk variabelen om de verschillende lengtes aan te geven. Je zult merken dat je tekening dan veel sneller te veranderen is zonder dat je moet gaan zoeken waar welk getal ook alweer voor staat.
 
 Een aantal belangrijke figuren zijn ellipsen, rechthoeken en lijnen. Je kunt ze vullen met een bepaalde kleur of de rand uitzetten of van kleur veranderen. Kijk maar eens naar het voorbeeld hieronder.
 <p data-height="490" data-theme-id="light" data-slug-hash="boEgrp" data-default-tab="js,result" data-user="jurjenh" data-embed-version="2" data-pen-title="boEgrp" class="codepen">See the Pen <a href="https://codepen.io/jurjenh/pen/boEgrp/">boEgrp</a> by Jurjenh (<a href="https://codepen.io/jurjenh">@jurjenh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
@@ -107,6 +107,7 @@ Zoals je ziet zijn al die getallen wel onoverzichtelijk. Wat als we nu iets will
 
 Dat ziet er al beter uit. Natuurlijk kunnen we ook nog een variabele toevoegen voor bepaalde kleuren of de hoogte van de wielen en meer. We gaan dat nu niet doen.
 
+#### Opdracht - Je eigen tekening
 Ga nu zelf een tekening maken. Je hebt hiervoor een html pagina nodig met het volgende erin:
 
 ~~~html
@@ -140,9 +141,230 @@ Nu we steeds meer code gaat toevoegen is het handig om een functie te maken voor
 
 Ga nu een animatie maken met je eigen tekening.
 
-<a name="les4"></a>
+<a name="les3"></a>
 ## Les 3 - Border detection
-Het is wel jammer dat de auto wegrijdt. Kunnen we hem niet laten omkeren? Jazeker!
+Het is wel jammer dat de auto wegrijdt. Kunnen we hem niet laten omkeren? Jazeker! We laten de auto rijden door steeds `xCar` op te hogen met 1. Op een gegeven moment is `xCar` groter dan de breedte van je scherm en is je auto niet meer te zien. Wat we dus doen om dit op te lossen is de snelheid van de auto om te draaien als `xCar` te groot of te klein is.
+
+<p data-height="286" data-theme-id="light" data-slug-hash="VMaXjd" data-default-tab="js,result" data-user="jurjenh" data-embed-version="2" data-pen-title="VMaXjd" class="codepen">See the Pen <a href="https://codepen.io/jurjenh/pen/VMaXjd/">VMaXjd</a> by Jurjenh (<a href="https://codepen.io/jurjenh">@jurjenh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+Het is nog niet perfect want de auto rijdt eerst helemaal het scherm uit en komt daarna weer terug. Je kunt vast een manier bedenken om dit op te lossen.
+
+#### Opdracht - Stuiterend balletje
+We hebben de auto alleen heen en weer laten rijden, maar je kunt natuurlijk ook je tekening naar boven en beneden laten stuiteren. Hieronder hebben we een voorbeeld gemaakt van een stuiterend balletje. Probeer zelf zoiets te maken zonder te spieken naar de code!
+
+<p data-height="402" data-theme-id="light" data-slug-hash="pWyLey" data-default-tab="result" data-user="jurjenh" data-embed-version="2" data-pen-title="pWyLey" class="codepen">See the Pen <a href="https://codepen.io/jurjenh/pen/pWyLey/">pWyLey</a> by Jurjenh (<a href="https://codepen.io/jurjenh">@jurjenh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+#### Opdracht - Meerdere stuiterend balletjes
+Maak nu een animatie waarin je _drie_ of meer balletjes laat stuiteren. Zorg dat ze ook andere richtingen op bewegen. Je hoeft je niet druk te maken over het botsen van balletjes. Probeer niet te spieken!
+
+<p data-height="265" data-theme-id="light" data-slug-hash="QqNmJK" data-default-tab="result" data-user="jurjenh" data-embed-version="2" data-pen-title="QqNmJK" class="codepen">See the Pen <a href="https://codepen.io/jurjenh/pen/QqNmJK/">QqNmJK</a> by Jurjenh (<a href="https://codepen.io/jurjenh">@jurjenh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+<a name="les4"></a>
+## Les 4 - Object gebruiken voor een balletje
+
+**LET OP! Deze les begint met veel leeswerk. Zorg dat je dit wel goed leest en begrijpt. Vraag om extra uitleg als dat nodig is.**
+
+Waarschijnlijk heb je in je code voor de opdracht met meerdere balletjes iets gebruikt als volgt:
+
+~~~javascript
+...
+var xSpeed1 = 2;
+var ySpeed1 = 3;
+var xBall1 = 21;
+var yBall1 = 21;
+var xSpeed2 = 5;
+var ySpeed2 = 3;
+var xBall2 = 50;
+var yBall2 = 50;
+var xSpeed3 = 1;
+var ySpeed3 = 3;
+var xBall3 = 70;
+var yBall3 = 10;
+
+...
+
+function draw(){
+  background(255);
+  if (xBall1 > width - radius || xBall1 < radius){
+      xSpeed1 = -xSpeed1;
+  }
+  if (yBall1 > height - radius || yBall1 < radius){
+      ySpeed1 = -ySpeed1;
+  }
+  xBall1 += xSpeed1;
+  yBall1 += ySpeed1;
+  ellipse(xBall1, yBall1, 2*radius, 2*radius);
+  ...
+}
+...
+~~~
+
+Voor drie balletjes gaat dit nog wel maar wat als je nou 20 balletjes wil gebruiken? Of 100? Dan wordt je code onleesbaar en een kleine verandering moet je op heel veel plekken je code gaan bijhouden. We willen graag een array of lijst gebruiken om de balletjes in op te slaan. Tot nu toe heb je alleen getallen of Strings opgeslagen in array's maar je kunt ook een heel balletje gaan opslaan en dat gaan met behulp van objecten.
+
+In een object ga je dingen opslaan die bij dat object horen. Bij een balletje zijn dat bijvoorbeeld de x- en y-positie. Kijk in het voorbeeld hoe we dat doen.
+~~~javascript
+function Bal(){
+  this.xPos = 20;
+  this.yPos = 30;
+}
+~~~
+
+Het sleutelwoord `this` verwijst naar het object zelf. Zo kun je onderscheid maken tussen wat we noemen de scope van een variabele. `this.xPos` is een variabele die alleen bestaat in het `Ball`-object. Dus als je de volgende code uitvoert zul je op de console een fout krijgen. De variabele `xPos` is niet gededinieerd.
+
+~~~javascript
+function Bal(){
+  this.xPos;
+  this.yPos;
+  this.radius;
+}
+
+console.log(xPos);
+~~~
+En als je het volgende doet dan zal je de waarde 10 zien.
+~~~javascript
+xPos = 10;
+
+function Bal(){
+  this.xPos = 20;
+  this.yPos = 30;
+  this.radius = 10;
+}
+
+console.log(xPos);
+~~~
+Wat verder belangrijk is dat het object een soort template is. Voor je echt met het object kunt gaan werken moet je er één of meerdere 'instanties' van maken. Dit wil zeggen dat je meerdere balletjes kunt maken die allemaal een eigen `xPos`, `yPos` en `radius` hebben. Een object legt bepaalde eigenschappen vast. We noemen dit ook wel een type.
+
+We gaan nu het voorbeeld met een balletje veranderen door een object te gebruiken. Een nieuwe instantie maak je in javascript als volgt: `var bal1 = new Bal();`. Als je `bal1` hebt gemaakt kun je met `bal1.xPos` bijvoorbeeld de `xPos` opvragen van dit ene balletje.
+
+<p data-height="384" data-theme-id="light" data-slug-hash="mBPaRJ" data-default-tab="js,result" data-user="jurjenh" data-embed-version="2" data-pen-title="mBPaRJ" class="codepen">See the Pen <a href="https://codepen.io/jurjenh/pen/mBPaRJ/">mBPaRJ</a> by Jurjenh (<a href="https://codepen.io/jurjenh">@jurjenh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+Voor nu lijkt het alsof dit ons niet verder heeft gebracht. We hebben veel meer code moeten invoeren! Geduld. De winst komt als we meerdere balletjes gaan gebruiken later.
+
+Bovendien hebben we pas de eerste stap gedaan. Want objecten kunnen niet alleen variabelen bevatten, maar ook methodes (functies). En dat is superhandig. We gaan nu een methode maken in het Bal-object waarmee we het balletje gaan tekenen en een methode om het balletje te bewegen.
+
+~~~javascript
+function Bal(){
+  this.xPos;
+  this.yPos;
+  this.radius;
+  this.xSpeed;
+  this.ySpeed;
+
+  this.teken = function(){
+    ellipse(this.xPos, this.yPos, 2*this.radius, 2*this.radius);
+  }
+
+  this.beweeg = function(){
+    if (this.xPos > width - this.radius || this.xPos < this.radius){
+      this.xSpeed = -this.xSpeed;
+    }
+    if (this.yPos > height - this.radius || this.yPos < this.radius){
+        this.ySpeed = -this.ySpeed;
+    }
+    this.xPos += this.xSpeed;
+    this.yPos += this.ySpeed;
+  }
+}
+~~~
+
+En nu komt ons programma er als volgt uit te zien.
+
+~~~javascript
+var xSize = 600;
+var ySize = 200;
+var bal1;
+
+function setup(){
+  createCanvas(xSize, ySize);
+
+  // We maken een bal aan
+  bal1 = new Bal();
+  bal1.xPos = 21;
+  bal1.yPos = 21;
+  bal1.radius = 10;
+  bal1.xSpeed = 5;
+  bal1.ySpeed = 3;
+}
+
+function draw(){
+  background(255);
+  bal1.teken();
+  bal1.beweeg();
+}
+
+function Bal(){
+  this.xPos;
+  this.yPos;
+  this.radius;
+  this.xSpeed;
+  this.ySpeed;
+
+  this.teken = function(){
+    ellipse(this.xPos, this.yPos, 2*this.radius, 2*this.radius);
+  }
+
+  this.beweeg = function(){
+    if (this.xPos > width - this.radius || this.xPos < this.radius){
+      this.xSpeed = -this.xSpeed;
+    }
+    if (this.yPos > height - this.radius || this.yPos < this.radius){
+        this.ySpeed = -this.ySpeed;
+    }
+    this.xPos += this.xSpeed;
+    this.yPos += this.ySpeed;
+  }
+}
+~~~
+
+Een laatste verbetering is dat je bij het maken van een object alvast waarden kunt meegeven. De functie die daarmee dan het object maakt noemt je de 'constructor'.
+~~~javascript
+var xSize = 600;
+var ySize = 200;
+var bal1;
+
+function setup(){
+  createCanvas(xSize, ySize);
+
+  // We maken een bal aan
+  bal1 = new Bal(21, 21, 10, 5, 3);
+}
+
+function draw(){
+  background(255);
+  bal1.teken();
+  bal1.beweeg();
+}
+
+function Bal(x, y, radius, xspd, yspd){
+  this.xPos = x;
+  this.yPos = y;
+  this.radius = radius;
+  this.xSpeed = xspd;
+  this.ySpeed = yspd;
+
+  ...
+}
+~~~
+
+#### Opdracht
+Maak zelf een stuiterend balletje waar je ook de kleur kunt instellen, met behulp van een object.
+
+#### Opdracht
+Herschijf je opdracht voor drie balletjes. Maak nu gebruik van een Bal-object.
+
+<a name="les4"></a>
+## Les 5 - Honderd balletjes!
+
+In deze les gaan we echt het grote voordeel van het gebruik van een object zien. We kunnen objecten namelijk opslaan in arrays en daar vervolgens met een for-loop doorheen lopen. Voordat we dat gaan doen moeten we even opfrissen hoe je ook weer willekeurigheid kunt gebruiken (random). Want als we 100 balletjes gaan laten stuiteren willen we niet voor ieder balletje alle gegevens gaan invoeren. Dat laten we willekeurig bepalen!
+
+<a name="les4"></a>
+## Les 6 - Collision detection
+
+<a name="les4"></a>
+## Les 7 - User input, muis en toetsenbord
+
+
+
 </xmp>
 
 <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
