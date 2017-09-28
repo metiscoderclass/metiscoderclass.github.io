@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial 1</title>
+    <style>
+      body {
+        background-color: #FFEC8D;
+      }
+    </style>
+  </head>
+  <body>
+
+    <section>
+      <h1>Hoe werkt deze tutorial?</h1>
+
+      <ul>
+        <li> je kunt omschakelen tussen Preview en Tutorial in de tab hierboven. Om verwarring te voorkomen heeft het tutorial een andere kleur.
+        </li>
+        <li> in de linkerkolom sleecteer je het bestand om te bewerken in de editor. In dit eerste tutorial gebruik je alleen <code>index.html</code>.
+        </li>
+      </ul>
+
+      <p> De tekst in het editor-venster in het midden kun je veranderen - het resultaat daarvan zie
+        je direct in het Preview-venster rechts. Hierdoor kun je snel experimenteren.
+        Het resultaat van een experiment kun je bewaren.
+      </p>
+      <p> Je hoeft niet bang te zijn dat je iets kapot maakt: je kunt altijd weer
+        terug naar de oorspronkelijke versie.
+      </p>
+      <p> We zullen later zien hoe je een dergelijke pagina in het web kunt publiceren.
+      </p>
+
+      <hr>
+    </section>
+    <section>
+      <h1>Een simpele webpagina</h1>
+      <p>Je ziet hier een voorbeeld van een heel eenvoudige webpagina.
+        Het kan het begin zijn van je eigen website.</p>
+
+      <p>Een html-pagina bestaat uit: </p>
+      <ol>
+        <li>Op regel 1: het document-type. Voor HTML5:
+          <code>&lt;!doctype html&gt;</code>
+        </li>
+        <li>De html-inhoud, tussen de haken: <br>
+          <code>&lt;html&gt;...&lt;/html&gt;</code>
+        </li>
+        <li> Daarbinnen, eerst de header, tussen <br>
+          <code>&lt;head&gt;...&lt;/head&gt;</code>
+        </li>
+        <li> en daarna de eigenlijke inhoud, tussen <br>
+          <code>&lt;body&gt;...&lt;/body&gt;</code>
+        </li>
+      </ol>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li>Verander de tekst tussen de haakjes <code>&lt;h1&gt;...&lt;/h1&gt;</code>.
+          Wat verandert er in het resultaat?
+        </li>
+        <li>Verander de haakjes <code>&lt;h1&gt;...&lt;/h1&gt;</code>
+          in <code>&lt;h2&gt;...&lt;/h2&gt;</code>.
+          Wat verandert er in het resultaat?
+        </li>
+        <li>Verander de tekst tussen de haakjes <code>&lt;title&gt;...&lt;/title&gt;</code>.
+          Verandert er iets in het resultaat?
+        </li>
+      </ol>
+
+    </section>
+
+    <section>
+      <h1>Tags en elementen</h1>
+      <p>Html gebruikt speciale "haakjes": een openingshaakje
+        heeft de vorm <code>&lt;naam&gt;</code>, het bijbehorende sluithaakje
+        <code>&lt;/naam&gt;</code>. We noemen de naam in het haakje de "tag".
+      </p>
+      <p> Deze haakjes moeten altijd netjes gepaard zijn: elk openingshaakje
+        moet afgesloten worden met een sluithaakje. (Later zullen we losse tags
+        tegenkomen.)
+      </p>
+      <blockquote>
+        Als je een haakje niet goed afsluit, zal de Thimble-editor je hierop wijzen.
+      </blockquote>
+
+      <p>
+        De html-tekst met openingshaakje <code>&lt;p&gt;</code> tot en met
+        het bijbehorende sluithaakje noemen we
+        een <em>&lt;p&gt;-element</em>, of kortweg p-element. Op dezelfde manier spreken we over
+        een &lt;h1&gt;-element, of een &lt;em&gt;-element.
+      </p>
+      <p>
+        De tekst tussen de twee haken van een element noemen we de <em>inhoud</em>
+        van dat element.
+      </p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li>Zet het woord "fantastisch" tussen de haken  <code>&lt;em&gt;...&lt;/em&gt;</code>.
+          Wat is het resultaat?
+        </li>
+        <li>Verander de haakjes <code>&lt;em&gt;...&lt;/em&gt;</code>
+          in <code>&lt;strong&gt;...&lt;/strong&gt;</code>.
+          Resultaat?
+        </li>
+        <li>Zet <em>om de haakjes</em> <code>&lt;strong&gt;...&lt;/strong&gt;</code>
+          de haken <code>&lt;em&gt;...&lt;/em&gt;</code>.
+          Resultaat?
+        </li>
+        <li>Voeg aan het eind een alinea toe (een &lt;p&gt;-element).
+          Hoe reageert de editor als je al wel het openingshaakje, maar nog niet
+          het sluithaakje gegeven hebt?
+        </li>
+        <li>Wat gebeurt er als je een &lt;p&gt;-element binnen een &lt;p&gt;-element probeert
+          te definiëren?
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Witruimte</h1>
+      <p> Witruimte (white space) is de lege ruimte tussen en rond de tekst:
+        spaties en regelovergangen.
+      </p>
+      <ul>
+        <li>De browser ziet spaties in de html-tekst alleen als scheidingsteken.
+        </li>
+        <li>
+          De hoeveelheid wit in het <em>resultaat</em> hangt niet af van het aantal
+          spaties in de html-tekst.
+        </li>
+        <li>We gebruiken spaties en regelovergangen in de html-tekst om deze voor
+          mensen goed leesbaar te maken.
+        </li>
+      </ul>
+
+      <p>De haken en de tekst <em>springen in</em>, als deze binnen andere
+        haken geplaatst zijn. Hiermee maak je de tekst beter leesbaar.
+        Doe dit zelf ook zelf altijd. De editor helpt je daarbij.
+      </p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li>Ga na dat meer of minder wit in de html-tekst geen gevolg heeft voor het
+          resultaat, door spaties en lege regels toe te voegen of te verwijderen.
+        </li>
+        <li>Wat is het resultaat als je de laatste (enige) spatie tussen twee woorden verwijdert?
+        </li>
+        <li>Hoe helpt de Thimble-editor je om de tekst tussen twee haken te
+          laten inspringen?
+        </li>
+        <li>Je kunt een regelovergang in het resultaat afdwingen door middel van
+          <code>&lt;br&gt;</code>. Dit is een element zonder sluithaak en zonder inhoud.
+          (Waarom heeft dit geen sluithaak?) <br>
+          Probeer dit uit.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Commentaar</h1>
+      <p>Je schijft HTML-code niet alleen om deze door een browser te laten verwerken.
+        Je collega's (en docenten, assistenten) moeten deze code ook kunnen lezen en
+        begrijpen. En waarschijnlijk moet je zelf later ook nog weten hoe het in elkaar
+        zit, en waarom.
+      </p>
+      <p>Je kunt de HTML-code leesbaar maken door te zorgen voor een nette opmaak: het
+        gebruik van <em>witruimte</em> in de code: regelovergangen, spaties,
+        inspringen.
+      </p>
+      <p>Soms is er extra informatie nodig om te begrijpen waarom de code zo geschreven
+        is. Daarvoor gebruik je, net als in andere programmeertalen, <em>commentaar</em>.
+        Commentaar begint met de openingshaak <code>&lt;!--</code> en eindigt met de
+        sluithaak <code>--&gt;</code>.
+      </p>
+      <p>Let op: in beide gevallen gaat het om twee opeenvolgende <code>--</code>tekens.
+        In de tekst in het commentaar zelf mag je geen <code>--</code> gebruiken. Daar
+        moet je vooral om denken als je een stuk HTML-code tussen commentaar-haken
+        plaatst.
+      </p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li>Voeg op een zinvolle plaats commentaar toe aan de voorbeeld-pagina.
+        </li>
+        <li>Ga na wat er gebeurt:
+          <ol>
+            <li>als je commentaar binnen commentaar plaatst.</li>
+            <li>als je de tekens <code>--</code> binnen commentaar plaatst.</li>
+          </ol>
+          Controleer dit zowel met een browser, als met de W3C-validator.
+        </li>
+      </ol>
+    </section>
+
+  </body>
+</html>
