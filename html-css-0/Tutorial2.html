@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial 2</title>
+    <style>
+      body {
+        background-color: #FFEC8D;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Opsomming</h1>
+      <p>Met behulp van het ul-element (<em>unordered list</em>) kun je een opsomming maken.
+        Een item van zo'n  opsomming geef je aan als li-element (list item).
+      </p>
+      <p>Voor een geordende lijst gebruik je het ol-element, met daarin een
+        aantal li-elementen.
+      </p>
+      <p>Een li-element kun je alleen gebruiken als onderdeel van een opsomming
+        of van een geordende lijst.
+      </p>
+      <p>Je kunt ook een opsomming binnen een opsomming plaatsen. Alle combinaties van
+        geordende en ongeordende lijsten zijn mogelijk.
+      </p>
+      <p>Het resultaat van een ul-element begint op een nieuwe regel - net als bij
+        een p-element of een h1-element. Zo'n element noemen we ook
+        wel een <em>block-level element</em>.
+      </p>
+      <p>Een opsomming kun je niet gebruiken binnen een p-element: het &lt;ol&gt;-haakje
+        sluit het p-element af, ook als je geen &lt;/p&gt;-sluithaakje gebruikt.
+      </p>
+
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li>Verander het ul-element in het voorbeeld in een ol-element. NB: je moet dan
+          het open- en het sluithaakje aanpassen.
+        </li>
+        <li>Maak als onderdeel van het item "Tekenen" een opsomming van een aantal
+          verschillende soorten, bijvoorbeeld: portrettekenen, manga's,
+          cartoons.
+        </li>
+        <li>Probeer een ol-element binnen een p-element te plaatsen. Wat gebeurt er?
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Elementen zonder inhoud</h1>
+      <p>Een horizontale lijn geef je aan met het hr-element. Dit is een bijzonder
+        element: het heeft geen inhoud, en daarom ook geen sluithaakje.
+      </p>
+      <p>Een hr-element kun je niet gebruiken binnen een p-element of binnen een
+        ul-element. Een horirizontale lijn geeft altijd een overgang naar een nieuwe regel
+        aan.
+      </p>
+      <p>Een ander element zonder inhoud is het br-element. Dit gebruik je om de overgang
+        op een nieuwe regel aan te geven. Dit is één van de manieren om de witruimte in
+        het resultaat te sturen.
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li>Voeg één of meer hr-elementen toe aan de voorbeeld-pagina.
+        </li>
+        <li>Voeg één of meer br-elementen toe. Geef enkele
+          voorbeelden waarin je dit element zinvol kunt gebruiken.
+        </li>
+        <li>Een hr-element kun je niet gebruiken binnen een p-element, of een ul-element.
+          Ga na wat er gebeurt als je dat toch probeert. Controleer dit zowel met een
+          browser als met de W3C-validator.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Nog meer elementen</h1>
+      <p>Er zijn nog veel meer elementen - teveel om hier te behandelen. Je hoeft die
+        elementen ook niet allemaal uit je hoofd te kennen: vaak is het voldoende als
+        je ze kunt ze opzoeken als je ze nodig hebt.
+      </p>
+      <p>Een leesbare beschrijving van de verschillende elementen vind je via MDN (het
+        Mozilla Developers Network):
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">
+          HTML Element reference
+        </a>.
+      </p>
+      <p>Via de website <a href="http://devdocs.io">devdocs.io</a> kun je eenvoudig
+        zoeken in verschillende soorten documentatie, onder andere MDN en de officiële
+        standaard (W3C).
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li>Zoek op wat de betekenis is van het q-element en van het blockquote-element.
+          Geef van allebeide een voorbeeld (in de voorbeeld-pagina).
+        </li>
+        <li>Zoek op wat de betekenis is van het dl-element. Geef een voorbeeld hiervan
+          in de voorbeeld-pagina.
+        </li>
+        <li>Zoek een ander element dat je zou kunnen gebruiken, en pas dit toe in
+          de voorbeeld-pagina.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Verwijzingen (links)</h1>
+      <p>Een html-document staat nooit alleen: het bevat links naar andere
+        documenten (hyperlinks), plaatjes (images), audio, video, of omvat
+        een andere webpagina (iframe).</p>
+      <p>Voor de verwijzingen naar een andere pagina, naar een plaatje, video,
+        of audio, gebruik je een URL (Uniform Resource Locator). Dit is
+        eenzelfde URL als je gebruikt in de browser, om aan te geven welke
+        webpagina je wilt bekijken.
+      </p>
+      <p>Een URL in een verwijzing zie je niet direct in het resultaat op het scherm.
+        De URL is geen onderdeel van de inhoud van een element, maar is een
+        <em>attribuut</em>. Zo'n attribuut is onderdeel van het
+        openingshaakje van het element.
+      </p>
+    </section>
+
+    <section>
+      <h1>Links en URLs</h1>
+      <p>In dit voorbeeld zie je het gebruik van een <em>hyperlink</em>, of gewoon
+        <em>link</em>. Een link bestaat uit de volgende delen:
+      </p>
+      <ul>
+        <li> een <code>&lt;a&gt;</code>-tag,</li>
+        <li> met als <em>attribuut</em>: <code>href="...een URL...";</code> </li>
+        <li> de tekst (of figuur) die op het scherm de link voorstelt; </li>
+        <li> het afsluitende <code>&lt;/a&gt;</code>-haakje. </li>
+      </ul>
+      <p>
+        Op het scherm zie je de link als een tekst in een speciale kleur, of soms onderstreept.
+        <br>
+        De kleur verandert als je de link al een keer bezocht hebt.
+        (We komen daarop terug bij de CSS-<em>pseudo-classes</em>.)
+      </p>
+      <hr>
+      <p> Opdrachten:
+      </p>
+      <ol>
+        <li> Voeg een link toe aan dit voorbeeld, bijvoorbeeld bij één van de genoemde hobbies.
+        </li>
+        <li> Bezoek één van deze links door middel van de rechter muisknop of CTRL-click (OS X): selecteer
+          "open in nieuw venster" of "open in nieuw tabblad".
+          Wat gebeurt er met de kleur van de link?
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>URL: uniform resource locator</h1>
+      <p> Een URL gebruik je om een object, bijvoorbeeld een document, in het web te vinden
+        ("locator").
+        De term "resource" betekent dat het om allerlei soorten objecten (dingen) kan gaan.
+        Vaak gebruik je een URL ook als <em>identificatie</em> van een object.
+      </p>
+      <p>
+        Voorbeeld: <code>https://thimble.webmaker.org/nl/project/52060/edit</code>
+      </p>
+      <p>
+        Een URL bestaat uit de volgende onderdelen:
+      </p>
+      <ul>
+        <li> het protocol (bijv. <code>http:</code> of <code>https:</code>)</li>
+        <li> de hostnaam (bijv. <code>thimble.webmaker.org</code>)</li>
+        <li> de padnaam (bijv. <code>/nl/project/52060/edit</code>)</li>
+      </ul>
+      <p>Na het http-protocol volgen de scheidingstekents <code>//</code>. <br>
+        Het laatste deel van de hostnaam is de domeinnaam, bijvoorbeeld
+        <code>webmaker.org</code>. <br>
+        Na de padnaam kunnen ook nog parameters volgen; deze komen later aan bod.
+      </p>
+      <hr>
+    </section>
+
+    <section>
+      <h1>Attributen</h1>
+      <p>Een &lt;a&gt;-element heeft een href-attribuut, met de URL als waarde.
+        Elk HTML-element kan attributen hebben. Deze noteer je binnen het openingshaakje,
+        na de naam van de tag. Een attribuut noteer je als <code>naam="waarde"</code>,
+        bijvoorbeeld: <code>href="http://infvo.nl"</code>.
+      </p>
+      <p>
+        Bij een link kun je opgeven of de link-pagina de huidige pagina
+        moet overschrijven, of dat deze in een nieuw venster geopend moet worden.
+        Hiervoor gebruik je het attribuut <code>target</code>:
+      </p>
+      <ul>
+        <li> <code>target="_self"</code> -
+          link-pagina overschrijft huidige pagina (default)
+        </li>
+        <li> <code>target="_blank"</code> -
+          open link-pagina in nieuw venster
+        </li>
+      </ul>
+      <hr>
+      <p><em>Opdracht:</em></p>
+      <ol>
+        <li> breid een &lt;a&gt;-tag in je voorbeeld uit met een target-attribuut, om
+          de pagina in een nieuw venster te openen. Controleer of dit werkt.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Een extra pagina</h1>
+      <p>Een website bestaat meestal uit meerdere pagina's. We hebben al
+        een tweede pagina gemaakt.
+      </p>
+      <p> Een verwijzing naar een andere pagina van dezelfde website is
+        eenvoudiger dan een verwijzing naar een andere website. Als
+        <code>href</code>-attribuut geef je de (pad)naam van het bestand
+        op.
+        Voorbeeld:
+      </p>
+      <pre>
+      &lt;a href="index.html"&gt;home&lt;a&gt;
+      </pre>
+      <p> Je hoeft
+        het protocol (bijv. <code>http://</code>) en het domein (bijv.
+        <code>infvo.nl</code>) niet te vermelden.
+
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+
+      <ol>
+        <li>Maak een link naar de tweede pagina. Gebruik hiervoor het woord
+          "Tekenen" in de hobby-opsomming als link-tekst.
+        </li>
+        <li>Maak een link van deze tweede pagina naar de eerste. Gebruik
+          hiervoor de tekst onderaan: verwijzing naar de "home" pagina.
+        </li>
+        <li>Maak een derde pagina in Thimble.</li>
+        <li>Maak een link van de eerst pagina naar deze derde pagina.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Bijzondere tekens; escapes</h1>
+      <p>In deze handleiding zie je soms zoiets: "&lt;p&gt;-element". Hoe kun je
+        een zo'n tekst maken zonder dat de browser in de war komt? Hoe kun je
+        voorkomen dat de browser dit als een openingshaakje ziet?
+      </p>
+      <p>Als je een bijzonder teken als "&lt;" in het resultaat wilt hebben, dan
+        gebruik je daarvoor een aparte notatie: &amp;lt; (lt staat voor "less than",
+        het wiskundige teken dat hier gebruikt wordt).
+      </p>
+      <p>Enkele andere tekens die je op zo'n manier noteert:</p>
+      <ul>
+        <li>&amp; - <code>&amp;</code></li>
+        <li>&copy; - <code>&amp;copy;</code></li>
+        <li>&para; - <code>&amp;para;</code></li>
+        <li>&nbsp; - <code>&amp;nbsp;</code> - non-breaking space</li>
+      </ul>
+      <p>In HTML-terminologie heten dit <em>named character references</em>;
+        soms noemen we dit ook <em>character entities</em>.
+        Voor een overzicht zie bijvoorbeeld:
+        <a href="http://dev.w3.org/html5/html-author/charref">character references</a>.
+      </p>
+      <p>Deze is een voorbeeld van een <em>escape-notatie</em>: je gebruikt speciale
+        tekens, in dit geval de <code>&amp;</code> om aan te geven dat wat volgt niet
+        op de normale manier verwerkt moet worden.
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li>Hoe kun je de tekst "&amp;lt;" in het resultaat krijgen?</li>
+        <li>Gebruik <em>nooit</em> een enkelvoudige &amp; in je HTML-code.
+          Als in het resultaat, of in een URL, een &amp; nodig is,
+          gebruik dan <em><strong>altijd</strong></em> de vorm <code>&amp;amp;</code>.
+          Hoe schrijf je dan de URL:
+          <code>http://infvo.com/lab/index.php?title=Hoofdpagina&amp;action=history</code>?
+        </li>
+        <li>Geef een voorbeeld van het gebruik van een <em>non-breaking space</em>.
+        </li>
+      </ol>
+    </section>
+
+  </body>
+</html>
