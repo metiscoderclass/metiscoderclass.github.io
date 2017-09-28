@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial 3</title>
+    <style>
+      body {
+        background-color: #FFEC8D;
+      }
+    </style>
+  </head>
+  <body>
+
+    <section>
+      <h1>Plaatjes, iframes</h1>
+      <p>Je kunt op verschillende manieren plaatjes en video's e.d. in een
+        html-document opnemen. </p>
+      <ul>
+        <li> een <em>verwijzing naar een plaatje</em> (via het <code>img</code>-element,
+          met een URL).
+          Het plaatje kan afkomstig zijn van dezelfde website, of elders van het web.
+        </li>
+        <li> een plaatje als <em>direct onderdeel</em> van het document: dit kan met
+          pixel-tekeningen (via een Canvas-element), of met vector-tekeningen
+          (via een SVG-element). Je kunt hiermee ook animaties maken.
+        </li>
+        <li> door inbedden (embedding) van een ander html-document, met behulp van
+          een iframe met een URL. Dit gebruik je bijvoorbeeld als je een YouTube-video
+          in je html-document wilt opnemen.
+        </li>
+        <li> (video, audio: P.M.)
+        </li>
+      </ul>
+      <p> In dit tutorial oefenen we met enkele van deze mogelijkheden.</p>
+    </section>
+
+    <section>
+      <h1>Plaatjes: img-element</h1>
+      <p>Met het &lt;img&gt;-element kun je een plaatje opnemen in een
+        html-pagina. De link (URL) naar het plaatje geef je aan in het
+        <code>src</code> attribuut. Een img-element heeft alleen attributen,
+        geen inhoud. Er is dus geen sluithaakje.
+      </p>
+      <p>Je kunt extra informatie opgeven met de attributen:
+      </p>
+      <ul>
+        <li><code>alt</code> - <em>verplicht:</em> alternatieve tekst</li>
+        <li><code>height</code> - hoogte, in <code>px</code> (pixels) </li>
+        <li><code>width</code> - breedte, idem</li>
+      </ul>
+      <p>Voor het positioneren van een plaatje gebruiken we CSS. Daar komen
+        we later op terug.
+      </p>
+      <p>Voorbeeld:</p>
+      <pre>
+&lt;img src="http://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Night.jpg"
+          alt="Paris by night" height="100px"&gt;
+</pre>
+      <p></p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Voeg een plaatje toe aan de voorbeeld-pagina. Gebruik hiervoor
+          een plaatje dat al ergens op het web staat (bijvoorbeeld van
+          Wikipedia).
+        </li>
+        <li> Als je het plaatje hierboven gebruikt, zie je dat het om een
+          klein plaatje gaat, maar dat het laden soms vrij lang duurt.
+          Hoe komt dat? (Hint: bekijk het plaatje rechtstreeks in de browser, en probeer
+          in te zoomen)
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Plaatsing van het plaatje</h1>
+      <p> Je kunt een plaatje op twee manieren in een document plaatsen:</p>
+      <ul>
+        <li> Als onderdeel van de lopende tekst (inline). Dit gebruik je voor kleine plaatjes,
+          zoals een smiley of een speciale letter-tekening.
+        </li>
+        <li> Als een block-level element (zoals een <code>&lt;p&gt;</code>-element).
+        </li>
+      </ul>
+      <p>
+      </p>
+      <p>Voorbeeld:</p>
+      <pre>
+&lt;p&gt; Je kunt een smiley-plaatje
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Fb_smiley.jpg" alt="smile"&gt;
+in een lopende tekst gebruiken.
+&lt;/p&gt;
+&lt;img src="http://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Night.jpg" alt="Paris by night" height="100px" &gt;
+&lt;p&gt; Dit is de volgende alinea.
+&lt;/p&gt;
+</pre>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Voeg een inline-plaatje toe aan de voorbeeld-pagina. Gebruik hiervoor
+          een plaatje dat al ergens op het web staat (bijvoorbeeld van
+          Wikipedia).
+        </li>
+        <li> Voeg een block-level plaatje toe aan de voorbeeld-pagina.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Kaarten</h1>
+      <p> Ook kaarten kun je eenvoudig toevoegen. Hiervoor heb je verschillende mogelijkheden.</p>
+      <ul>
+        <li>Een statische kaart: dit is een plaatje, dat je via een API ophaalt.
+          De server die de API afhandelt rekent het plaatje uit, en stuurt dit op.
+        </li>
+        <li>Een interactieve kaart: hiervoor heb je JavaScript nodig. Het script bij
+          de kaart haalt de gegevens op van de server, via een API, en plaatst het
+          resultaat in het document.
+        </li>
+      </ul>
+      <pre>
+&lt;img src="https://maps.googleapis.com/maps/api/staticmap?center=52.361951,4.918170&amp;zoom=14&amp;size=200x200"&gt;
+</pre>
+      <hr>
+      <p> <em>Opdrachten:</em></p>
+      <ol>
+        <li> Voeg deze kaart toe aan het voorbeeld-document, en bekijk het resultaat. <br>
+          Wat gebeurt er bij aanpassen van de parameters (center, zoom)?
+        </li>
+        <li> Zoek uit hoe je de coordinaten van een voor jou interessant punt kunt vinden,
+          maak een passende kaart.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>iframe element</h1>
+      <p>Met het &lt;iframe&gt;-element kun je een ander html-document opnemen in een
+        html-document. De link (URL) naar het document geef je aan in het
+        <code>src</code> attribuut. De inhoud van het iframe-element (tussen de haakjes)
+        is de alternatieve inhoud die getoond wordt als het bron-document niet gevonden
+        kan worden.
+      </p>
+      <p>Je kunt extra informatie opgeven met de attributen:
+      </p>
+      <ul>
+        <li><code>height</code> - hoogte, in <code>px</code> (pixels) </li>
+        <li><code>width</code> - breedte, idem</li>
+      </ul>
+      <p>Voorbeeld:</p>
+      <pre>
+&lt;iframe width="560" height="315"
+  src="//webmaker.org" allowfullscreen&gt;
+&lt;/iframe&gt;
+</pre>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Voeg een iframe toe aan de voorbeeld-website. Gebruik hiervoor
+          een html-document dat al ergens op het web staat, bijvoorbeeld een YouTube video.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>SVG tekeningen</h1>
+      <p> Een Scalable Vector Graphics tekening beschrijf je op een vergelijkbare
+        manier als een html-document: met elementen met attributen. Zie het voorbeeld hieronder.
+        <code>&lt;g&gt;</code> staat voor <em>group</em>; <code>&lt;rect&gt;</code> voor
+        <em>rectangle</em>.
+      </p>
+      <pre>
+&lt;svg xmlns="http://www.w3.org/2000/svg"
+     version="1.1" width="5cm" height="5cm"&gt;
+  &lt;desc&gt;Two groups, each of two rectangles&lt;/desc&gt;
+  &lt;g id="group1" fill="red"&gt;
+    &lt;rect x="1cm" y="1cm" width="1cm" height="1cm"/&gt;
+    &lt;rect x="3cm" y="1cm" width="1cm" height="1cm"/&gt;
+  &lt;/g&gt;
+  &lt;g id="group2" fill="green"&gt;
+    &lt;rect x="1cm" y="3cm" width="1cm" height="1cm"/&gt;
+    &lt;rect x="3cm" y="3cm" width="1cm" height="1cm"/&gt;
+  &lt;/g&gt;
+
+  &lt;!-- Show outline of canvas using 'rect' element --&gt;
+  &lt;rect x=".01cm" y=".01cm" width="4.98cm" height="4.98cm"
+        fill="none" stroke="blue" stroke-width=".02cm"/&gt;
+&lt;/svg&gt;
+</pre>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+
+        <li> Voeg bovenstaand plaatje toe aan het voorbeeld-document hiernaast. <br>
+          Verander een paar van de waarden (afmetingen, kleuren), en bekijk het resultaat.
+        </li>
+        <li> Voeg een SVG-tekening toe aan je html-document.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Canvas tekeningen</h1>
+      <p> Je kunt tekeningen maken in een html-document, met behulp van het Canvas-element.
+        Door middel van JavaScript-functies kun je hierop pixel-tekeningen maken.
+      </p>
+      <p> In een volgend tutorial gaan we dieper in op het gebruik van het Canvas.
+        (Javascript voor games.)
+      </p>
+      <hr>
+    </section>
+
+  </body>
+</html>
