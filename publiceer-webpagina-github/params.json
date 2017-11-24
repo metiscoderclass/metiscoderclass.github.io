@@ -1,0 +1,7 @@
+{
+  "name": "Handleiding GitHub Pages",
+  "tagline": "Met deze handleiding kun je eenvoudig, snel en gratis je webpagina online zetten.",
+  "body": "Het is niet de bedoeling dat deze handleiding wordt aangepast met de GitHub Pages Generator. Bewerk in plaats daar van het bestand in `_includes/content.md`.",
+  "google": "UA-85801803-1",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

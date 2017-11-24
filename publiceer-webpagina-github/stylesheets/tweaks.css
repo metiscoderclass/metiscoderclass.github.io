@@ -1,0 +1,11 @@
+p img[alt] {
+  background-color: #f5f5f5;
+  padding: .5em;
+  border-radius: .5em;
+}
+
+p img.emoji {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
